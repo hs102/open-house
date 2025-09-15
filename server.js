@@ -61,3 +61,5 @@ app.get("/vip-lounge", isSignedIn, (req, res) => {
 app.listen(port, () => {
   console.log(`The express app is ready on port ${port}!`);
 });
+
+app.use('/listings', require('./controllers/listings.js'));
